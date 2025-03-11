@@ -49,13 +49,12 @@ const ChampionDetail = async ({ params }: Params) => {
           <h4 className="text-xl font-semibold mb-4">
             {champion.passive.name}
           </h4>
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 relative">
+          <div className="flex items-start gap-6">
+            <div className="min-w-16 min-h-16 relative">
               <Image
                 src={`${IMAGE_BASE_URL}/passive/${champion.passive.image.full}`}
                 alt={champion.passive.name}
-                width={100}
-                height={100}
+                fill
                 className="object-contain"
               />
             </div>
@@ -71,8 +70,8 @@ const ChampionDetail = async ({ params }: Params) => {
               key={spell.id}
               className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="flex items-start gap-4">
-                <div className="w-16 h-16 relative flex">
+              <div className="flex justify-center items-start gap-6">
+                <div className="min-w-16 min-h-16 relative">
                   <Image
                     src={`${IMAGE_BASE_URL}/spell/${spell.image.full}`}
                     alt={spell.name}
