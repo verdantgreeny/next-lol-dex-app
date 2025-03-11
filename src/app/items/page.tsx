@@ -2,7 +2,7 @@ import Image from "next/image";
 import { fetchItemList } from "@/utils/serverApi";
 import { IMAGE_BASE_URL } from "@/constant/riotConstants";
 
-export default async function ItemsPage() {
+const ItemsList = async () => {
   const items = await fetchItemList();
   // console.log(items);
   return (
@@ -14,11 +14,10 @@ export default async function ItemsPage() {
             key={i}
             className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col justify-baseline items-center w-full gap-1"
           >
-            <div className="relative w-full h-32 mb-4">
+            <div className="flex justify-center items-center w-full h-32 mb-4">
               <Image
                 src={`${IMAGE_BASE_URL}/item/${item.image.full}`}
                 alt={item.name}
-                className="object-cover"
                 width={150}
                 height={150}
               />
@@ -37,4 +36,6 @@ export default async function ItemsPage() {
       </div>
     </div>
   );
-}
+};
+
+export default ItemsList;
