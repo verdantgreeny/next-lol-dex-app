@@ -20,3 +20,15 @@ export const fetchChampionList = async (): Promise<Champion[]> => {
   //   console.log(data);
   return Object.values(data.data);
 };
+
+export const fetchChampionDetail = async (id: string) => {
+  const res = await fetch(`${API_BASE_URL}/champion/${id}.json`, {
+    cache: "no-store",
+  });
+
+  const data = await res.json();
+  //   console.log(data.data);
+  const champion = data.data[id];
+  //   console.log("챔피온",champion);
+  return champion;
+};
