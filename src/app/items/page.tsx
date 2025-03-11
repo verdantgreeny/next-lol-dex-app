@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { fetchItemList } from "@/utils/serverApi";
+import { IMAGE_BASE_URL } from "@/constant/riotConstants";
 
 export default async function ItemsPage() {
   const items = await fetchItemList();
@@ -14,7 +15,7 @@ export default async function ItemsPage() {
             className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col justify-center items-center"
           >
             <Image
-              src={`https://ddragon.leagueoflegends.com/cdn/15.5.1/img/item/${item.image.full}`}
+              src={`${IMAGE_BASE_URL}/item/${item.image.full}`}
               alt={item.name}
               className="object-cover"
               width={150}
