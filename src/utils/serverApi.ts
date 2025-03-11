@@ -1,5 +1,5 @@
 import { API_BASE_URL } from "@/constant/riotConstants";
-import { Champion } from "@/types/Champion";
+import { Champion, ChampionDetail } from "@/types/Champion";
 import { Item } from "@/types/Items";
 
 export const fetchItemList = async (): Promise<Item[]> => {
@@ -21,7 +21,9 @@ export const fetchChampionList = async (): Promise<Champion[]> => {
   return Object.values(data.data);
 };
 
-export const fetchChampionDetail = async (id: string) => {
+export const fetchChampionDetail = async (
+  id: string
+): Promise<ChampionDetail> => {
   const res = await fetch(`${API_BASE_URL}/champion/${id}.json`, {
     cache: "no-store",
   });

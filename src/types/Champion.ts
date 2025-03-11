@@ -11,6 +11,9 @@ export type ChampionDetail = {
   id: string;
   name: string;
   title: string;
+  image: {
+    full: string;
+  };
   lore: string;
   partype: string;
   tags: string[];
@@ -20,7 +23,6 @@ export type ChampionDetail = {
     armor: number;
     attackdamage: number;
     movespeed: number;
-    [key: string]: number;
   };
   spells: {
     id: string;
