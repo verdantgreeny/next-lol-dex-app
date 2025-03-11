@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,25 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <nav className="bg-green-950 text-white p-4">
+          <div className="container mx-auto flex space-x-6 justify-between items-center">
+            <Link href="/" className="text-xl font-bold hover:text-gray-300">
+              LOL Dex
+            </Link>
+            <div className="flex space-x-4">
+              <Link href="/champions" className="hover:text-gray-300">
+                챔피언
+              </Link>
+              <Link href="/items" className="hover:text-gray-300">
+                아이템
+              </Link>
+              <Link href="/rotation" className="hover:text-gray-300">
+                로테이션
+              </Link>
+            </div>
+          </div>
+        </nav>
+        <main className="container mx-auto p-4">{children}</main>
       </body>
     </html>
   );
