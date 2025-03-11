@@ -17,13 +17,6 @@ export type ChampionDetail = {
   lore: string;
   partype: string;
   tags: string[];
-  stats: {
-    hp: number;
-    hpperlevel: number;
-    armor: number;
-    attackdamage: number;
-    movespeed: number;
-  };
   spells: {
     id: string;
     name: string;
@@ -40,11 +33,4 @@ export type ChampionDetail = {
       full: string;
     };
   };
-  allytips: string[];
-  enemytips: string[];
-  skins: {
-    id: string;
-    name: string;
-    num: number;
-  }[];
 };

@@ -40,6 +40,55 @@ const ChampionDetail = async ({ params }: Params) => {
           <p className="text-gray-700 ">{champion.lore}</p>
         </div>
       </section>
+
+      {/* 스킬 섹션 */}
+      <section className="space-y-6">
+        <h3 className="text-3xl font-bold">스킬 정보</h3>
+
+        <div className="bg-white p-6 rounded-xl shadow-sm">
+          <h4 className="text-xl font-semibold mb-4">
+            {champion.passive.name}
+          </h4>
+          <div className="flex items-start gap-4">
+            <div className="w-16 h-16 relative">
+              <Image
+                src={`${IMAGE_BASE_URL}/passive/${champion.passive.image.full}`}
+                alt={champion.passive.name}
+                width={100}
+                height={100}
+                className="object-contain"
+              />
+            </div>
+            <p className="text-gray-700 flex-1">
+              {champion.passive.description}
+            </p>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-4">
+          {champion.spells.map((spell) => (
+            <div
+              key={spell.id}
+              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 relative flex">
+                  <Image
+                    src={`${IMAGE_BASE_URL}/spell/${spell.image.full}`}
+                    alt={spell.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold">{spell.name}</h4>
+                  <p className="text-gray-600 text-sm">{spell.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };
