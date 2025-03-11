@@ -1,15 +1,6 @@
 ---
 name: Feature Template
 about: 기능 요청 이슈 템플릿
-title: "[Feature]"
-labels: ''
-assignees: ''
-
----
-
----
-name: Feature Template
-about: 기능 요청 이슈 템플릿
 title: '[Feature]'
 labels: "✨ Feature"
 assignees: ''
