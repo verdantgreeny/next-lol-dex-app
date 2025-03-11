@@ -17,6 +17,6 @@ export const fetchChampionList = async (): Promise<Champion[]> => {
     { next: { revalidate: 60 * 60 * 24 } } //24시간마다
   );
   const data = await res.json();
-
+  //   console.log(data);
   return Object.values(data.data);
 };

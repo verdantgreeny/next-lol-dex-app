@@ -6,7 +6,7 @@ const ItemsList = async () => {
   const items = await fetchItemList();
   // console.log(items);
   return (
-    <div className="p-">
+    <div className="p-4">
       <h1 className="text-3xl font-bold mb-6">아이템 목록</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 w-full">
         {items.map((item, i) => (
@@ -18,8 +18,8 @@ const ItemsList = async () => {
               <Image
                 src={`${IMAGE_BASE_URL}/item/${item.image.full}`}
                 alt={item.name}
-                width={150}
-                height={150}
+                width={100}
+                height={100}
               />
             </div>
             <h2 className="text-center font-medium truncate w-full text-red-700">
