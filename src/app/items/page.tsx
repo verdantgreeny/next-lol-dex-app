@@ -1,39 +1,20 @@
-import Image from "next/image";
 import { fetchItemList } from "@/utils/serverApi";
-import { IMAGE_BASE_URL } from "@/constants/riotConstants";
-import Link from "next/link";
+import ItemCard from "@/components/ItemCard";
+import CommonGrid from "@/components/CommonGrid";
 
 const ItemsList = async () => {
   const items = await fetchItemList();
-  console.log(items);
+  // console.log("아이템", items);
   return (
     <div className="p-4">
       <h1 className="text-3xl font-bold mb-6">아이템 목록</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 w-full">
+      <CommonGrid>
         {items.map((item, i) => (
-          <Link key={i} href={`/items/${item.name}`}>
-            <article className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col justify-baseline items-center w-full gap-1">
-              <div className="flex justify-center items-center w-full h-32 mb-4">
-                <Image
-                  src={`${IMAGE_BASE_URL}/item/${item.image.full}`}
-                  alt={item.name}
-                  width={100}
-                  height={100}
-                />
-              </div>
-              <h2 className="text-center font-medium truncate w-full text-red-700">
-                {item.name}
-              </h2>
-              <p className="text-sm text-center text-green-700 w-full">
-                GOLD : {item.gold.total}
-              </p>
-              <p className="text-sm text-justify text-fuchsia-800 w-full overflow-hidden text-ellipsis whitespace-normal">
-                {item.plaintext}
-              </p>
-            </article>
-          </Link>
+          <div key={item.id || i}>
+            <ItemCard item={item} />
+          </div>
         ))}
-      </div>
+      </CommonGrid>
     </div>
   );
 };

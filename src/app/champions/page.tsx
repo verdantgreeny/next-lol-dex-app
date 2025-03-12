@@ -1,4 +1,5 @@
 import ChampionCard from "@/components/ChampionCard";
+import CommonGrid from "@/components/CommonGrid";
 import { fetchChampionList } from "@/utils/serverApi";
 import React from "react";
 
@@ -8,11 +9,11 @@ const ChampionsList = async () => {
   return (
     <div className="p-4">
       <h1 className="text-3xl font-bold mb-6">챔피언 목록</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 w-full">
+      <CommonGrid>
         {champions.map((champion) => (
           <ChampionCard key={champion.id} champion={champion} />
         ))}
-      </div>
+      </CommonGrid>
     </div>
   );
 };
