@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { fetchItemList } from "@/utils/serverApi";
-import { IMAGE_BASE_URL } from "@/constant/riotConstants";
+import { IMAGE_BASE_URL } from "@/constants/riotConstants";
 import Link from "next/link";
 
 const ItemsList = async () => {

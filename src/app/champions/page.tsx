@@ -1,4 +1,4 @@
-import { IMAGE_BASE_URL } from "@/constant/riotConstants";
+import { IMAGE_BASE_URL } from "@/constants/riotConstants";
 import { fetchChampionList } from "@/utils/serverApi";
 import Image from "next/image";
 import Link from "next/link";
