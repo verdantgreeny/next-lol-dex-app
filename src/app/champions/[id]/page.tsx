@@ -21,8 +21,7 @@ const ChampionDetail = async ({ params }: Params) => {
           <Image
             src={`${IMAGE_BASE_URL}/champion/${champion.image.full}`}
             alt={champion.name}
-            width={200}
-            height={200}
+            fill
             className="object-contain"
           />
         </div>
