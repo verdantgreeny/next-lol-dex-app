@@ -1,15 +1,15 @@
 import { IMAGE_BASE_URL } from "@/constant/riotConstants";
 import { fetchChampionDetail } from "@/utils/serverApi";
+import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
 
-type Params = {
-  params: {
-    id: string;
-  };
+export const metadata: Metadata = {
+  title: "리그 오브 레전드 챔피언 정보",
+  description: "리그 오브 레전드 챔피언의 상세 정보",
 };
 
-const ChampionDetail = async ({ params }: Params) => {
+const ChampionDetail = async ({ params }: { params: { id: string } }) => {
   //   console.log(params.id);
   const champion = await fetchChampionDetail(params.id);
   console.log(champion);
@@ -71,7 +71,7 @@ const ChampionDetail = async ({ params }: Params) => {
               key={spell.id}
               className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="flex justify-center items-start gap-6">
+              <div className="flex justify-baseline items-start gap-6">
                 <div className="min-w-16 min-h-16 relative">
                   <Image
                     src={`${IMAGE_BASE_URL}/spell/${spell.image.full}`}
