@@ -13,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="ko">
+      <body suppressHydrationWarning={true}>
         <nav className="bg-green-950 text-white p-4">
           <div className="container mx-auto flex space-x-6 justify-between items-center">
             <Link href="/" className="text-xl font-bold hover:text-gray-300">

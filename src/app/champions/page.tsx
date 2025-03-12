@@ -23,7 +23,7 @@ const ChampionsList = async () => {
               <h2 className="text-center font-medium mt-2 text-red-800">
                 {champion.name}
               </h2>
-              <p className="text-gray-800 text-sm text-center">
+              <p className="text-gray-800 text-sm text-center truncate w-full">
                 {champion.title}
               </p>
             </article>

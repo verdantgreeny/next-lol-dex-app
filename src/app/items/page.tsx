@@ -25,10 +25,10 @@ const ItemsList = async () => {
             <h2 className="text-center font-medium truncate w-full text-red-700">
               {item.name}
             </h2>
-            <p className="text-sm text-center text-green-700">
+            <p className="text-sm text-center text-green-700 w-full">
               GOLD : {item.gold.total}
             </p>
-            <p className="text-sm text-justify text-fuchsia-800">
+            <p className="text-sm text-justify text-fuchsia-800 w-full overflow-hidden text-ellipsis whitespace-normal">
               {item.plaintext}
             </p>
           </article>

@@ -21,7 +21,8 @@ const ChampionDetail = async ({ params }: Params) => {
           <Image
             src={`${IMAGE_BASE_URL}/champion/${champion.image.full}`}
             alt={champion.name}
-            fill
+            width={256}
+            height={256}
             className="object-contain"
           />
         </div>
@@ -53,7 +54,8 @@ const ChampionDetail = async ({ params }: Params) => {
               <Image
                 src={`${IMAGE_BASE_URL}/passive/${champion.passive.image.full}`}
                 alt={champion.passive.name}
-                fill
+                width={64}
+                height={64}
                 className="object-contain"
               />
             </div>
@@ -74,7 +76,8 @@ const ChampionDetail = async ({ params }: Params) => {
                   <Image
                     src={`${IMAGE_BASE_URL}/spell/${spell.image.full}`}
                     alt={spell.name}
-                    fill
+                    width={64}
+                    height={64}
                     className="object-contain"
                   />
                 </div>
