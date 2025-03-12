@@ -6,9 +6,8 @@ export const getChampionRotation = async (): Promise<Champion[]> => {
     fetch("/api/rotation"),
     fetchChampionList(),
   ]);
-
-  const { freeChampionIds } = await rotationRes.json();
-
+  const freeChampionIds = await rotationRes.json();
+  // console.log("로테이션 데이타:", freeChampionIds);
   return freeChampionIds.map((id: number) => {
     const numericId = id.toString();
     return champions.find((c) => c.key === numericId);
