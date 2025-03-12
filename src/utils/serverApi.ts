@@ -7,7 +7,7 @@ export const fetchItemList = async (): Promise<Item[]> => {
     cache: "force-cache",
   });
   const data = await res.json();
-  //   console.log(data);
+    // console.log(data);
   return Object.values(data.data);
 };
 
