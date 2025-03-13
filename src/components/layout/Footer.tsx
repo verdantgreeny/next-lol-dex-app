@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-green-950 text-white py-6 mt-8">
+    <footer className="bg-[var(--gray-cool)] text-white py-6 mt-8">
       <div className="container mx-auto text-center">
         <p className="text-sm">
           © {new Date().getFullYear()} LOL Dex. All rights reserved.

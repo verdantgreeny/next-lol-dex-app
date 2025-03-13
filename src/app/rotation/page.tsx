@@ -9,7 +9,7 @@ const RotationList = () => {
 
   if (isPending) {
     return (
-      <div className="p-4 text-center text-gray-500">
+      <div className="p-4 text-center text-[var(--gray-cool)]">
         챔피언 정보를 불러오는 중...
       </div>
     );

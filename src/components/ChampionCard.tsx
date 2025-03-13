@@ -17,8 +17,8 @@ const ChampionCard = ({ champion }: { champion: Champion }) => {
           className="transition-transform group-hover:scale-105"
         />
         <div className="mt-2 text-center">
-          <h2 className="font-medium text-red-800">{champion.name}</h2>
-          <p className="text-gray-600 text-sm truncate">{champion.title}</p>
+          <h2 className="font-bold text-[var(--gray-1-5)]">{champion.name}</h2>
+          <p className="text-[var(--gray-1)] text-sm truncate">{champion.title}</p>
         </div>
       </article>
     </Link>
