@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const ChampionDetail = async ({ params }: { params: { id: string } }) => {
   //   console.log(params.id);
   const champion = await fetchChampionDetail(params.id);
-  console.log(champion);
+  // console.log(champion);
 
   return (
     <div className="max-w-5xl mx-auto p-4 space-y-8">
