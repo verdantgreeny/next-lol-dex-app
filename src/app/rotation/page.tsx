@@ -4,19 +4,35 @@ import ChampionCard from "@/components/ChampionCard";
 import CommonGrid from "@/components/CommonGrid";
 import { Champion } from "@/types/Champion";
 import { getChampionRotation } from "@/utils/riotApi";
-import React, { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
 const RotationList = () => {
-  const [champions, setChampions] = useState<Champion[]>([]);
+  const {
+    data: champions,
+    isPending,
+    isError,
+    error,
+  } = useQuery<Champion[]>({
+    queryKey: ["champion-rotation"],
+    queryFn: getChampionRotation,
+    staleTime: 60 * 60 * 1000,
+  });
 
-  useEffect(() => {
-    const fetchRotation = async () => {
-      const data = await getChampionRotation();
-      setChampions(data);
-    };
+  if (isPending) {
+    return (
+      <div className="p-4 text-center text-gray-500">
+        챔피언 정보를 불러오는 중...
+      </div>
+    );
+  }
 
-    fetchRotation();
-  }, []);
+  if (isError) {
+    return (
+      <div className="p-4 text-center text-red-500">
+        {error.message || "챔피언 정보를 불러올 수 없습니다"}
+      </div>
+    );
+  }
 
   return (
     <div className="p-4">
