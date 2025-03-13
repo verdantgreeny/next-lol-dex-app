@@ -16,10 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body suppressHydrationWarning={true}>
+      <body
+        suppressHydrationWarning={true}
+        className="min-h-screen flex flex-col"
+      >
         <Providers>
           <Header />
-          <main className="container mx-auto p-4 min-h-screen">{children}</main>
+          <main className="container mx-auto p-4 flex-1">{children}</main>
           <Footer />
         </Providers>
       </body>

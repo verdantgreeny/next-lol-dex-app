@@ -18,8 +18,8 @@ const Header = () => {
               <Image
                 src="/logo.png"
                 alt="logo"
-                width={120}
-                height={40}
+                width={200}
+                height={200}
                 className="w-32 md:w-48"
               />
             </Link>
@@ -38,7 +38,6 @@ const Header = () => {
             >
               <svg
                 className="h-6 w-6"
-                fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >

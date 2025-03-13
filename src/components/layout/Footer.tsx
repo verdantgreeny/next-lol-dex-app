@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <footer className="bg-[var(--gray-cool)] text-white py-6 mt-8">
+    <footer className="bg-[var(--gray-cool)] text-white py-6 mt-8 ">
       <div className="container mx-auto text-center">
-        <p className="text-sm">
+        <p className="text-sm text-[var(--gold)]">
           © {new Date().getFullYear()} LOL Dex. All rights reserved.
         </p>
         <p className="text-xs mt-2 opacity-75">
