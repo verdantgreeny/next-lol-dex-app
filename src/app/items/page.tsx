@@ -11,15 +11,15 @@ const ItemsList = async () => {
     <div className="p-4">
       <h1 className="text-3xl font-bold mb-6">아이템 목록</h1>
 
-      <CommonGrid>
-        <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />}>
+        <CommonGrid>
           {items.map((item, i) => (
             <div key={item.id || i}>
               <ItemCard item={item} />
             </div>
           ))}
-        </Suspense>
-      </CommonGrid>
+        </CommonGrid>
+      </Suspense>
     </div>
   );
 };

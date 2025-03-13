@@ -2,6 +2,7 @@
 
 import ChampionCard from "@/components/ChampionCard";
 import CommonGrid from "@/components/CommonGrid";
+import SkeletonChampionCard from "@/components/SkeletonChampionCard";
 import { useRotationQuery } from "@/hooks/useRotationQuery";
 
 const RotationList = () => {
@@ -9,8 +10,9 @@ const RotationList = () => {
 
   if (isPending) {
     return (
-      <div className="p-4 text-center text-[var(--gray-cool)]">
-        챔피언 정보를 불러오는 중...
+      <div className="p-4">
+        <h1 className="text-3xl font-bold mb-6">챔피언 로테이션 목록</h1>
+        <SkeletonChampionCard />
       </div>
     );
   }
