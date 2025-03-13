@@ -2,21 +2,10 @@
 
 import ChampionCard from "@/components/ChampionCard";
 import CommonGrid from "@/components/CommonGrid";
-import { Champion } from "@/types/Champion";
-import { getChampionRotation } from "@/utils/riotApi";
-import { useQuery } from "@tanstack/react-query";
+import { useRotationQuery } from "@/hooks/useRotationQuery";
 
 const RotationList = () => {
-  const {
-    data: champions,
-    isPending,
-    isError,
-    error,
-  } = useQuery<Champion[]>({
-    queryKey: ["champion-rotation"],
-    queryFn: getChampionRotation,
-    staleTime: 60 * 60 * 1000,
-  });
+  const { data: champions, isPending, isError, error } = useRotationQuery();
 
   if (isPending) {
     return (
