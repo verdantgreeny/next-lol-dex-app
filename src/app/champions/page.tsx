@@ -6,9 +6,7 @@ import Loading from "./loading";
 
 const ChampionsList = async () => {
   const champions = await fetchChampionList();
-
-  // if (Math.random() > 0.5) throw new Error("안녕하세요. 에러입니다.");
-
+  // if (Math.random() > 0.7) throw new Error("안녕하세요. 에러입니다.");
   return (
     <div className="p-4">
       <h1 className="text-3xl font-bold mb-6">챔피언 목록</h1>
