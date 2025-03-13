@@ -10,15 +10,16 @@ const ItemsList = async () => {
   return (
     <div className="p-4">
       <h1 className="text-3xl font-bold mb-6">아이템 목록</h1>
-      <Suspense fallback={<Loading />}>
-        <CommonGrid>
+
+      <CommonGrid>
+        <Suspense fallback={<Loading />}>
           {items.map((item, i) => (
             <div key={item.id || i}>
               <ItemCard item={item} />
             </div>
           ))}
-        </CommonGrid>
-      </Suspense>
+        </Suspense>
+      </CommonGrid>
     </div>
   );
 };

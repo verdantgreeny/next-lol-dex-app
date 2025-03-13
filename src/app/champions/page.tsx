@@ -10,13 +10,14 @@ const ChampionsList = async () => {
   return (
     <div className="p-4">
       <h1 className="text-3xl font-bold mb-6">챔피언 목록</h1>
-      <Suspense fallback={<Loading />}>
-        <CommonGrid>
+
+      <CommonGrid>
+        <Suspense fallback={<Loading />}>
           {champions.map((champion) => (
             <ChampionCard key={champion.id} champion={champion} />
           ))}
-        </CommonGrid>
-      </Suspense>
+        </Suspense>
+      </CommonGrid>
     </div>
   );
 };
