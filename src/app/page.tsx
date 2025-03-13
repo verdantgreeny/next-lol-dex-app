@@ -1,4 +1,4 @@
-import Card from "@/components/layout/Card";
+import HomeCard from "@/components/HomeCard";
 
 export default function Home() {
   return (
@@ -13,17 +13,17 @@ export default function Home() {
       </section>
 
       <section className="grid md:grid-cols-3 gap-6 text-center ">
-        <Card
+        <HomeCard
           href="/champions"
           title="챔피언 정보 보기"
           backgroundImage="/champions.webp"
         />
-        <Card
+        <HomeCard
           href="/rotation"
           title="금주 로테이션 확인"
           backgroundImage="/rotation.webp"
         />
-        <Card
+        <HomeCard
           href="/items"
           title="아이템 정보 보기"
           backgroundImage="/items.webp"

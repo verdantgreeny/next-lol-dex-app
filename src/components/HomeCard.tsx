@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Card = ({
+const HomeCard = ({
   href,
   title,
   backgroundImage,
@@ -29,4 +29,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export default HomeCard;
