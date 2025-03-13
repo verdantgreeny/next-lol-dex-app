@@ -2,7 +2,7 @@ import React from "react";
 
 const SkeletonChampionCard = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 w-full">
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 w-full">
       {Array.from({ length: 24 }).map((_, i) => (
         <div
           className="bg-white p-4 rounded-lg shadow-md animate-pulse"

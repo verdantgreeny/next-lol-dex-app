@@ -1,5 +1,5 @@
-import ChampionCard from "@/components/ChampionCard";
-import CommonGrid from "@/components/CommonGrid";
+import ChampionCard from "@/components/champions/ChampionCard";
+import CommonGrid from "@/components/common/CommonGrid";
 import { fetchChampionList } from "@/utils/serverApi";
 import React, { Suspense } from "react";
 import Loading from "./loading";

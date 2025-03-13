@@ -1,8 +1,9 @@
 "use client";
 
-import ChampionCard from "@/components/ChampionCard";
-import CommonGrid from "@/components/CommonGrid";
-import SkeletonChampionCard from "@/components/SkeletonChampionCard";
+import ChampionCard from "@/components/champions/ChampionCard";
+import CommonGrid from "@/components/common/CommonGrid";
+import ErrorComponent from "@/components/common/ErrorComponent";
+import SkeletonChampionCard from "@/components/common/SkeletonChampionCard";
 import { useRotationQuery } from "@/hooks/useRotationQuery";
 
 const RotationList = () => {
@@ -18,11 +19,7 @@ const RotationList = () => {
   }
 
   if (isError) {
-    return (
-      <div className="p-4 text-center text-red-500">
-        {error.message || "챔피언 정보를 불러올 수 없습니다"}
-      </div>
-    );
+    return <ErrorComponent error={error} />;
   }
 
   return (
