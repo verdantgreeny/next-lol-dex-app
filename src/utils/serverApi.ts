@@ -1,4 +1,4 @@
-import { API_BASE_URL } from "@/constant/riotConstants";
+import { API_BASE_URL } from "@/constants/riotConstants";
 import { Champion, ChampionDetail } from "@/types/Champion";
 import { Item } from "@/types/Items";
 
@@ -7,7 +7,7 @@ export const fetchItemList = async (): Promise<Item[]> => {
     cache: "force-cache",
   });
   const data = await res.json();
-    // console.log(data);
+  // console.log(data);
   return Object.values(data.data);
 };
 

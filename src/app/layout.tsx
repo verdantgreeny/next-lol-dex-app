@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "리그 오브 레전드 정보 앱",
@@ -33,7 +34,9 @@ export default function RootLayout({
             </div>
           </div>
         </nav>
-        <main className="container mx-auto p-4">{children}</main>
+        <main className="container mx-auto p-4">
+          <Providers>{children}</Providers>
+        </main>
       </body>
     </html>
   );

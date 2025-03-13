@@ -1,4 +1,4 @@
-import { IMAGE_BASE_URL } from "@/constant/riotConstants";
+import { IMAGE_BASE_URL } from "@/constants/riotConstants";
 import { fetchChampionDetail } from "@/utils/serverApi";
 import { Metadata } from "next";
 import Image from "next/image";
