@@ -69,7 +69,7 @@ const ChampionDetail = async ({ params }: { params: { id: string } }) => {
           {champion.spells.map((spell) => (
             <div
               key={spell.id}
-              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white p-4 rounded-xl shadow-sm"
             >
               <div className="flex justify-baseline items-start gap-6">
                 <div className="min-w-16 min-h-16 relative">

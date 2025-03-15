@@ -3,6 +3,7 @@ import { Champion, ChampionDetail } from "@/types/Champion";
 import { Item } from "@/types/Items";
 
 export const fetchItemList = async (): Promise<Item[]> => {
+  console.log("빌드 시 데이터 가져오기...");
   const res = await fetch(`${API_BASE_URL}/item.json`, {
     cache: "force-cache",
   });
@@ -24,6 +25,7 @@ export const fetchChampionList = async (): Promise<Champion[]> => {
 export const fetchChampionDetail = async (
   id: string
 ): Promise<ChampionDetail> => {
+  console.log("API 호출 시간:", new Date().toISOString());
   const res = await fetch(`${API_BASE_URL}/champion/${id}.json`, {
     cache: "no-store",
   });

@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="ko">
       <body
         suppressHydrationWarning={true}
-        className="min-h-screen flex flex-col"
+        className="min-h-screen flex flex-col "
       >
         <Providers>
           <Header />

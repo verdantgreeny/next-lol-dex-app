@@ -5,16 +5,16 @@ import Link from "next/link";
 
 const ItemCard = ({ item }: { item: Item }) => {
   return (
-    <Link href={`/items/${item.name}`}>
-      <article className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col justify-baseline items-center w-full gap-1">
-        <div className="flex justify-center items-center w-full h-32 mb-4">
-          <Image
-            src={`${IMAGE_BASE_URL}/item/${item.image.full}`}
-            alt={item.name}
-            width={100}
-            height={100}
-          />
-        </div>
+    <Link href={`/items/${item.name}`} className="group">
+      <article className="bg-[var(--magic-engineering-black)] p-4 rounded-lg flex flex-col justify-baseline items-center w-full gap-1">
+        <Image
+          src={`${IMAGE_BASE_URL}/item/${item.image.full}`}
+          alt={item.name}
+          width={100}
+          height={100}
+          className="transition-transform group-hover:scale-105"
+        />
+
         <h2 className="text-center font-medium truncate w-full text-[var(--gray-1-5)]">
           {item.name}
         </h2>
