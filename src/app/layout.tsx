@@ -22,7 +22,7 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
-          <main className="bg-[var(--gray-3)] min-h-full flex-1 px-20">{children}</main>
+          <main className="bg-[var(--gray-3)] min-h-full flex-1 px-4 md:px-20">{children}</main>
           <Footer />
         </Providers>
       </body>
