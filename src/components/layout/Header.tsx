@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import NavLink from "./NavLink";
 import MobileNavLink from "./MobileNavLink";
+import { ROUTES } from "@/constants/routes";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ const Header = () => {
       <nav className="bg-[var(--gray-cool)] text-white">
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
-            <Link href="/">
+            <Link href={ROUTES.HOME}>
               <Image
                 src="/logo.png"
                 alt="logo"
@@ -26,9 +27,9 @@ const Header = () => {
 
             {/* 데스크톱 메뉴 */}
             <div className="hidden md:flex space-x-6">
-              <NavLink href="/champions">챔피언</NavLink>
-              <NavLink href="/items">아이템</NavLink>
-              <NavLink href="/rotation">로테이션</NavLink>
+              <NavLink href={ROUTES.CHAMPIONS}>챔피언</NavLink>
+              <NavLink href={ROUTES.ITEMS}>아이템</NavLink>
+              <NavLink href={ROUTES.ROTATION}>로테이션</NavLink>
             </div>
 
             {/* 모바일 메뉴 버튼 */}
@@ -58,13 +59,22 @@ const Header = () => {
         {isOpen && (
           <div className="md:hidden pb-4">
             <div className="flex flex-col space-y-2 px-4">
-              <MobileNavLink href="/champions" onClick={() => setIsOpen(false)}>
+              <MobileNavLink
+                href={ROUTES.CHAMPIONS}
+                onClick={() => setIsOpen(false)}
+              >
                 챔피언
               </MobileNavLink>
-              <MobileNavLink href="/items" onClick={() => setIsOpen(false)}>
+              <MobileNavLink
+                href={ROUTES.ITEMS}
+                onClick={() => setIsOpen(false)}
+              >
                 아이템
               </MobileNavLink>
-              <MobileNavLink href="/rotation" onClick={() => setIsOpen(false)}>
+              <MobileNavLink
+                href={ROUTES.ROTATION}
+                onClick={() => setIsOpen(false)}
+              >
                 로테이션
               </MobileNavLink>
             </div>

@@ -2,13 +2,14 @@ import { IMAGE_BASE_URL } from "@/constants/riotConstants";
 import { Item } from "@/types/Items";
 import Image from "next/image";
 import Link from "next/link";
+import { ROUTES } from "@/constants/routes";
 
 const ItemCard = ({ item }: { item: Item }) => {
   const itemName = item.name.replace(/<[^>]+>/g, "");
   const urlName = encodeURIComponent(itemName);
 
   return (
-    <Link href={`/items/${urlName}`} className="group">
+    <Link href={`${ROUTES.ITEMS}/${urlName}`} className="group">
       <article className="bg-[var(--magic-engineering-black)] p-4 rounded-lg flex flex-col justify-baseline items-center w-full gap-1 border-2 border-[var(--gray-1)]">
         <Image
           src={`${IMAGE_BASE_URL}/item/${item.image.full}`}

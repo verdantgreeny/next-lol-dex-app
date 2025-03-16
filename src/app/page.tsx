@@ -1,4 +1,5 @@
 import HomeCard from "@/components/HomeCard";
+import { ROUTES } from "@/constants/routes";
 
 export default function Home() {
   return (
@@ -14,17 +15,17 @@ export default function Home() {
 
       <section className="grid md:grid-cols-3 gap-6 text-center ">
         <HomeCard
-          href="/champions"
+          href={ROUTES.CHAMPIONS}
           title="챔피언 정보 보기"
           backgroundImage="/champions.webp"
         />
         <HomeCard
-          href="/rotation"
+          href={ROUTES.ROTATION}
           title="금주 로테이션 확인"
           backgroundImage="/rotation.webp"
         />
         <HomeCard
-          href="/items"
+          href={ROUTES.ITEMS}
           title="아이템 정보 보기"
           backgroundImage="/items.webp"
         />

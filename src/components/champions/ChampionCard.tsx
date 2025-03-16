@@ -4,10 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Champion } from "@/types/Champion";
 import { IMAGE_BASE_URL } from "@/constants/riotConstants";
+import { ROUTES } from "@/constants/routes";
 
 const ChampionCard = ({ champion }: { champion: Champion }) => {
   return (
-    <Link href={`/champions/${champion.id}`} className="group">
+    <Link href={`${ROUTES.CHAMPIONS}/${champion.id}`} className="group">
       <article className="bg-[var(--magic-engineering-black)] p-4 rounded-lg flex flex-col items-center border-2 border-[var(--gray-1)]">
         <Image
           src={`${IMAGE_BASE_URL}/champion/${champion.image.full}`}
