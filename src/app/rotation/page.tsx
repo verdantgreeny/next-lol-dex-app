@@ -12,7 +12,7 @@ const RotationList = () => {
   if (isPending) {
     return (
       <div className="p-4">
-        <h1 className="text-3xl font-bold mb-6">챔피언 로테이션 목록</h1>
+        <h1 className="text-3xl font-bold mb-6 text-[var(--gold)]">챔피언 로테이션 목록</h1>
         <SkeletonChampionCard />
       </div>
     );
@@ -24,7 +24,7 @@ const RotationList = () => {
 
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold mb-6">챔피언 로테이션 목록</h1>
+      <h1 className="text-3xl font-bold mb-6 text-[var(--gold)]">챔피언 로테이션 목록</h1>
 
       <CommonGrid>
         {champions.map((champion) => (

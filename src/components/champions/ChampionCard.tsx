@@ -8,7 +8,7 @@ import { IMAGE_BASE_URL } from "@/constants/riotConstants";
 const ChampionCard = ({ champion }: { champion: Champion }) => {
   return (
     <Link href={`/champions/${champion.id}`} className="group">
-      <article className="bg-[var(--magic-engineering-black)] p-4 rounded-lg flex flex-col items-center">
+      <article className="bg-[var(--magic-engineering-black)] p-4 rounded-lg flex flex-col items-center border-2 border-[var(--gray-1)]">
         <Image
           src={`${IMAGE_BASE_URL}/champion/${champion.image.full}`}
           alt={champion.name}

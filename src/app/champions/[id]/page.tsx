@@ -28,25 +28,30 @@ const ChampionDetail = async ({ params }: { params: { id: string } }) => {
         </div>
 
         <div className="space-y-4 flex-1">
-          <h1 className="text-4xl font-bold">{champion.name}</h1>
-          <h2 className="text-2xl text-gray-600">{champion.title}</h2>
+          <h1 className="text-4xl font-bold text-[var(--gold)]">
+            {champion.name}
+          </h1>
+          <h2 className="text-2xl text-white">{champion.title}</h2>
           <div className="flex gap-2">
             {champion.tags.map((tag) => (
-              <span key={tag} className="px-3 py-1 border text-sm">
+              <span
+                key={tag}
+                className="px-3 py-1 border text-sm text-white"
+              >
                 {tag}
               </span>
             ))}
           </div>
-          <p className="text-gray-700 ">{champion.lore}</p>
+          <p className="text-[var(--gray-1)] ">{champion.lore}</p>
         </div>
       </section>
 
       {/* 스킬 섹션 */}
       <section className="space-y-6">
-        <h3 className="text-3xl font-bold">스킬 정보</h3>
+        <h3 className="text-3xl font-bold text-[var(--gold)]">스킬 정보</h3>
 
-        <div className="bg-white p-6 rounded-xl shadow-sm">
-          <h4 className="text-xl font-semibold mb-4">
+        <div className="bg-[var(--magic-engineering-black)] p-6 rounded-xl">
+          <h4 className="text-xl font-semibold mb-4 text-white">
             {champion.passive.name}
           </h4>
           <div className="flex items-start gap-6">
@@ -59,7 +64,7 @@ const ChampionDetail = async ({ params }: { params: { id: string } }) => {
                 className="object-contain"
               />
             </div>
-            <p className="text-gray-700 flex-1">
+            <p className="text-[var(--gray-1)] flex-1">
               {champion.passive.description}
             </p>
           </div>
@@ -69,7 +74,7 @@ const ChampionDetail = async ({ params }: { params: { id: string } }) => {
           {champion.spells.map((spell) => (
             <div
               key={spell.id}
-              className="bg-white p-4 rounded-xl shadow-sm"
+              className="bg-[var(--magic-engineering-black)] p-4 rounded-xl"
             >
               <div className="flex justify-baseline items-start gap-6">
                 <div className="min-w-16 min-h-16 relative">
@@ -82,8 +87,12 @@ const ChampionDetail = async ({ params }: { params: { id: string } }) => {
                   />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold">{spell.name}</h4>
-                  <p className="text-gray-600 text-sm">{spell.description}</p>
+                  <h4 className="text-lg font-semibold text-white">
+                    {spell.name}
+                  </h4>
+                  <p className="text-[var(--gray-1)] text-sm">
+                    {spell.description}
+                  </p>
                 </div>
               </div>
             </div>
