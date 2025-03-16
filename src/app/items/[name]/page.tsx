@@ -30,27 +30,23 @@ const ItemDetail = async ({ params }: { params: { name: string } }) => {
           alt={itemData.name}
           width={124}
           height={124}
-
         />
 
         <div className="flex flex-col md:flex-row gap-2 md:gap-4">
           <p className="text-sm text-center text-[var(--gray-1)]">
-            구매 가격: {itemData.gold.base}
+            구매 가격: {itemData.gold.base} G
           </p>
           <p className="text-sm text-center text-[var(--gray-1)]">
-            판매 가격: {itemData.gold.sell}
+            판매 가격: {itemData.gold.sell} G
           </p>
           <p className="text-sm text-center text-[var(--gray-1)]">
-            총 가격: {itemData.gold.total}
+            총 가격: {itemData.gold.total} G
           </p>
         </div>
 
         <div className="flex flex-wrap gap-2">
           {itemData.tags.map((tag, index) => (
-            <span
-              key={index}
-              className="px-2 py-1 bg-[var(--gray-1)] text-[var(--magic-engineering-black)] rounded text-sm"
-            >
+            <span key={index} className="px-3 py-1 border text-sm text-[var(--gray-1)] rounded-2xl">
               {tag}
             </span>
           ))}

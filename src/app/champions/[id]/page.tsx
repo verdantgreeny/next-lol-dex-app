@@ -36,7 +36,7 @@ const ChampionDetail = async ({ params }: { params: { id: string } }) => {
             {champion.tags.map((tag) => (
               <span
                 key={tag}
-                className="px-3 py-1 border text-sm text-white"
+                className="px-3 py-1 border text-sm text-[var(--gray-1)] rounded-2xl"
               >
                 {tag}
               </span>
