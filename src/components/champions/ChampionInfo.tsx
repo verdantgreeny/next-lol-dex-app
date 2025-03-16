@@ -2,6 +2,7 @@ import { IMAGE_BASE_URL } from "@/constants/riotConstants";
 import { ChampionDetail } from "@/types/Champion";
 import Image from "next/image";
 import React from "react";
+import Tag from "../common/Tag";
 
 const ChampionInfo = ({
   champion,
@@ -26,13 +27,8 @@ const ChampionInfo = ({
         </h1>
         <h2 className="text-2xl text-white">{champion.title}</h2>
         <div className="flex gap-2">
-          {champion.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-3 py-1 border text-sm text-[var(--gray-1)] rounded-2xl"
-            >
-              {tag}
-            </span>
+          {champion.tags.map((tag, i) => (
+            <Tag key={i} tag={tag} />
           ))}
         </div>
         <p className="text-[var(--gray-1)]">{champion.lore}</p>

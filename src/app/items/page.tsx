@@ -1,5 +1,5 @@
 import { fetchItemList } from "@/utils/serverApi";
-import ItemCard from "@/components/ItemCard";
+import ItemCard from "@/components/items/ItemCard";
 import CommonGrid from "@/components/common/CommonGrid";
 import { Suspense } from "react";
 import Loading from "../loading";
