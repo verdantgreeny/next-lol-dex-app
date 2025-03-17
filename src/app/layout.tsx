@@ -18,12 +18,12 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        suppressHydrationWarning={true}
+        // suppressHydrationWarning={true}
         className="min-h-screen flex flex-col "
       >
         <Providers>
           <Header />
-          <main className="dark:bg-[var(--gray-3)] min-h-full flex-1 py-2 px-4 md:px-20">
+          <main className="bg-[var(--blue)] dark:bg-[var(--gray-3)] min-h-full flex-1 py-2 px-4 md:px-20">
             {children}
           </main>
           <Footer />

@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -17,10 +18,10 @@ const config: Config = {
         "magic-engineering-black": "var(--magic-engineering-black)",
         gold: "var(--gold)",
         "gold-light": "var(--gold-light)",
+        blue: "var(--blue)",
       },
     },
   },
   plugins: [],
-  darkMode: "class",
 };
 export default config;

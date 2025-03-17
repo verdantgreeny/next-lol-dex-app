@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="bg-[var(--gray-cool)] text-white">
+      <nav className="dark:bg-[var(--magic-engineering-black)] text-white">
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             <Link href={ROUTES.HOME}>
