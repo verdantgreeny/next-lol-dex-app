@@ -1,7 +1,7 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { startTransition, useEffect } from "react";
+import ErrorComponent from "@/components/common/ErrorComponent";
+import { useEffect } from "react";
 
 export default function Error({
   error,
@@ -13,21 +13,6 @@ export default function Error({
   useEffect(() => {
     console.error(error);
   }, [error]);
-  const { refresh } = useRouter();
-  return (
-    <div>
-      <h2>Something went wrong!</h2>
-      <h2>{error.message}</h2>
-      <button
-        onClick={() =>
-          startTransition(() => {
-            refresh();
-            reset();
-          })
-        }
-      >
-        Try again
-      </button>
-    </div>
-  );
+
+  return <ErrorComponent error={error} reset={reset} />;
 }

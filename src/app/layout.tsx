@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Link from "next/link";
+import "../styles/globals.css";
 import { Providers } from "./providers";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "리그 오브 레전드 정보 앱",
@@ -15,28 +16,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body suppressHydrationWarning={true}>
-        <nav className="bg-green-950 text-white p-4">
-          <div className="container mx-auto flex space-x-6 justify-between items-center">
-            <Link href="/" className="text-xl font-bold hover:text-gray-300">
-              LOL Dex
-            </Link>
-            <div className="flex space-x-4">
-              <Link href="/champions" className="hover:text-gray-300">
-                챔피언
-              </Link>
-              <Link href="/items" className="hover:text-gray-300">
-                아이템
-              </Link>
-              <Link href="/rotation" className="hover:text-gray-300">
-                로테이션
-              </Link>
-            </div>
-          </div>
-        </nav>
-        <main className="container mx-auto p-4">
-          <Providers>{children}</Providers>
-        </main>
+      <body
+        suppressHydrationWarning={true}
+        className="min-h-screen flex flex-col "
+      >
+        <Providers>
+          <Header />
+          <main className="bg-[var(--gray-3)] min-h-full flex-1 px-4 md:px-20">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

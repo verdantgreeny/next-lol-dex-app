@@ -12,26 +12,26 @@ export type ChampionDetail = {
   id: string;
   name: string;
   title: string;
-  image: {
-    full: string;
-  };
+  image: ImageType;
   lore: string;
-  partype: string;
   tags: string[];
-  spells: {
-    id: string;
-    name: string;
-    description: string;
-    tooltip: string;
-    image: {
-      full: string;
-    };
-  }[];
-  passive: {
-    name: string;
-    description: string;
-    image: {
-      full: string;
-    };
-  };
+  spells: SpellType[];
+  passive: PassiveType;
+};
+
+type ImageType = {
+  full: string;
+};
+
+type SpellType = {
+  id: string;
+  name: string;
+  description: string;
+  image: ImageType;
+};
+
+type PassiveType = {
+  name: string;
+  description: string;
+  image: ImageType;
 };
