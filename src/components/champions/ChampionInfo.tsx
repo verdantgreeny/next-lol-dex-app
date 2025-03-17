@@ -25,7 +25,7 @@ const ChampionInfo = ({
         <h1 className="text-4xl font-bold text-[var(--gold)]">
           {champion.name}
         </h1>
-        <h2 className="text-2xl text-white">{champion.title}</h2>
+        <h2 className="text-2xl text-[var(--gray-1-5)]">{champion.title}</h2>
         <div className="flex gap-2">
           {champion.tags.map((tag, i) => (
             <Tag key={i} tag={tag} />

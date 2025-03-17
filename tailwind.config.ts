@@ -16,6 +16,7 @@ const config: Config = {
         "gray-cool": "var(--gray-cool)",
         "magic-engineering-black": "var(--magic-engineering-black)",
         gold: "var(--gold)",
+        "gold-light": "var(--gold-light)",
       },
     },
   },

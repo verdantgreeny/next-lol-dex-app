@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
-const ThemeToddle = () => {
+const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -48,4 +48,4 @@ const ThemeToddle = () => {
   );
 };
 
-export default ThemeToddle;
+export default ThemeToggle;
