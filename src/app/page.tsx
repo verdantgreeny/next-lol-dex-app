@@ -3,8 +3,8 @@ import { ROUTES } from "@/constants/routes";
 
 export default function Home() {
   return (
-    <div className="space-y-8">
-      <section className="text-center py-7">
+    <div className="space-y-6">
+      <section className="text-center py-2">
         <h1 className="text-4xl font-bold mb-4 text-[var(--gold)]">
           리그 오브 레전드 정보 앱
         </h1>

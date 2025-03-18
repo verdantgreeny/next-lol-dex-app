@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import { Providers } from "./providers";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ThemeToggle from "@/components/layout/ThemeToggle";
 
 export const metadata: Metadata = {
   title: "리그 오브 레전드 정보 앱",
@@ -22,8 +23,11 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
-          <main className="bg-[var(--gray-3)] min-h-full flex-1 px-4 md:px-20">{children}</main>
+          <main className="min-h-full flex-1 py-2 px-4 md:px-20">
+            {children}
+          </main>
           <Footer />
+          <ThemeToggle />
         </Providers>
       </body>
     </html>
