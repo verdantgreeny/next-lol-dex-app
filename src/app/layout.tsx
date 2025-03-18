@@ -19,14 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <body
-        suppressHydrationWarning={true}
-        className="min-h-screen flex flex-col "
-      >
+    <html lang="ko" suppressHydrationWarning>
+      <body suppressHydrationWarning className="flex flex-col min-h-screen ">
         <Providers>
           <Header />
-          <main className="min-h-full flex-1 py-2 px-4 md:px-20">
+          <main className="flex-1 min-h-full px-4 py-2 md:px-20">
             {children}
           </main>
           <Footer />
