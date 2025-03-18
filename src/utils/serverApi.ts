@@ -6,7 +6,7 @@ import { CACHE_TIME } from "@/constants/riotConstants";
 
 export const fetchItemList = async (): Promise<Item[]> => {
   try {
-    console.log("빌드 시 데이터 가져오기...");
+    // console.log("빌드 시 데이터 가져오기...");
     const res = await fetch(`${API_BASE_URL}/item.json`, {
       cache: "force-cache",
     });
@@ -43,7 +43,7 @@ export const fetchChampionDetail = async (
   id: string
 ): Promise<ChampionDetail> => {
   try {
-    console.log("API 호출 시간:", new Date().toISOString());
+    // console.log("API 호출 시간:", new Date().toISOString());
     const res = await fetch(`${API_BASE_URL}/champion/${id}.json`, {
       cache: "no-store",
     });

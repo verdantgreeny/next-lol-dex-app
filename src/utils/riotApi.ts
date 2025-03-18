@@ -8,7 +8,7 @@ export const getChampionRotation = async (): Promise<Champion[]> => {
       fetchChampionList(),
     ]);
     const freeChampionIds = await rotationRes.json();
-    console.log("로테이션 데이타:", freeChampionIds);
+    // console.log("로테이션 데이타:", freeChampionIds);
     return freeChampionIds.map((id: number) => {
       const numId = id.toString();
       return champions.find((c) => c.key === numId);
