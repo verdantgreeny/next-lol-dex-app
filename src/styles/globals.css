@@ -14,6 +14,17 @@
   --blue: #0a323c;
 }
 
+.dark {
+  --background: #010a13;
+  --foreground: #f0e6d2;
+}
+
+/* 기본 스타일 */
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
 header {
   background: var(--gray-cool);
 }
@@ -26,6 +37,7 @@ main {
   background: var(--blue);
 }
 
+/* 다크 모드 스타일 */
 .dark header {
   background: var(--magic-engineering-black);
 }

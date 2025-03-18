@@ -16,7 +16,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="fixed bottom-3 right-3 p-3 rounded-full bg-[var(--gray-3)] border-2 border-[var(--gold)] text-white hover:bg-[var(--gray-1-5)] transition hover:cursor-pointer"
+      className="fixed bottom-6 right-6 p-3 rounded-full bg-[var(--gray-3)] border-2 border-[var(--gold)] text-white hover:bg-[var(--gray-1-5)] transition hover:cursor-pointer"
     >
       {theme === "dark" ? (
         <svg
