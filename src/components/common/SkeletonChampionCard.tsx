@@ -2,8 +2,8 @@ import React from "react";
 
 const SkeletonChampionCard = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 w-full">
-      {Array.from({ length: 24 }).map((_, i) => (
+    <div className="grid w-full grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
+      {Array.from({ length: 20 }).map((_, i) => (
         <div
           className="bg-[var(--magic-engineering-black)] p-4 rounded-lg shadow-md animate-pulse border-2 border-[var(--gray-1)]"
           key={i}

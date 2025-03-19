@@ -10,8 +10,8 @@ const Spell = ({
 }) => {
   return (
     <div className="bg-[var(--magic-engineering-black)] p-4 rounded-xl">
-      <div className="flex justify-baseline items-start gap-6">
-        <div className="min-w-16 min-h-16 relative">
+      <div className="flex items-start gap-6 justify-baseline">
+        <div className="relative min-w-16 min-h-16">
           <Image
             src={`${IMAGE_BASE_URL}/spell/${spell.image.full}`}
             alt={spell.name}
@@ -22,7 +22,9 @@ const Spell = ({
         </div>
         <div>
           <h4 className="text-lg font-semibold text-white">{spell.name}</h4>
-          <p className="text-[var(--gray-1)] text-sm">{spell.description}</p>
+          <p className="text-[var(--gray-1)] text-sm">
+            {spell.description.replace(/<[^>]+>/g, "")}
+          </p>
         </div>
       </div>
     </div>

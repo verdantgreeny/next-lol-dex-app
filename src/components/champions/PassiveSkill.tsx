@@ -10,9 +10,9 @@ const PassiveSkill = ({
 }) => {
   return (
     <div className="bg-[var(--magic-engineering-black)] p-6 rounded-xl">
-      <h4 className="text-xl font-semibold mb-4 text-white">{passive.name}</h4>
+      <h4 className="mb-4 text-xl font-semibold text-white">{passive.name}</h4>
       <div className="flex items-start gap-6">
-        <div className="min-w-16 min-h-16 relative">
+        <div className="relative min-w-16 min-h-16">
           <Image
             src={`${IMAGE_BASE_URL}/passive/${passive.image.full}`}
             alt={passive.name}
@@ -21,7 +21,9 @@ const PassiveSkill = ({
             className="object-contain"
           />
         </div>
-        <p className="text-[var(--gray-1)] flex-1">{passive.description}</p>
+        <p className="text-[var(--gray-1)] flex-1">
+          {passive.description.replace(/<[^>]+>/g, "")}
+        </p>
       </div>
     </div>
   );
