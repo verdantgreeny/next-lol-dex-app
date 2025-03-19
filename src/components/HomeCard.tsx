@@ -13,7 +13,7 @@ const HomeCard = ({
 }) => {
   return (
     <Link href={href}>
-      <div className="relative p-6 rounded-lg shadow-md md:h-80 flex flex-col items-center justify-center opacity-90 transition-transform duration-300 hover:scale-105 hover:brightness-110 overflow-hidden">
+      <div className="relative flex flex-col items-center justify-center p-6 overflow-hidden transition-transform duration-300 rounded-lg shadow-md md:h-80 opacity-90 hover:scale-105 hover:brightness-110">
         <Image
           src={backgroundImage}
           alt={title}

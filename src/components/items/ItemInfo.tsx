@@ -18,7 +18,7 @@ const ItemInfo = ({
         height={124}
       />
 
-      <div className="flex flex-col md:flex-row gap-2 md:gap-4">
+      <div className="flex flex-col gap-2 md:flex-row md:gap-4">
         <p className="text-sm text-center text-[var(--gray-1)]">
           구매 가격: {itemData.gold.base} G
         </p>

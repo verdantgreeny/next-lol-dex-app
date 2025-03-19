@@ -19,14 +19,14 @@ const ItemDetail = async ({ params }: { params: { name: string } }) => {
   }
 
   return (
-    <div className="max-w-5xl mx-auto py-8 space-y-8">
+    <div className="max-w-5xl py-8 mx-auto space-y-8">
       <h1 className="text-3xl font-bold mb-6 text-[var(--gold)] ">
         {itemName}
       </h1>
 
       <ItemInfo itemData={itemData} />
 
-      <div className="mt-6 w-full">
+      <div className="w-full mt-6">
         <h2 className="text-xl font-bold mb-2 text-[var(--gold)]">설명</h2>
         <p className="text-sm text-justify text-[var(--gray-1)] mt-2">
           {itemData.plaintext}

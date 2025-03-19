@@ -4,7 +4,7 @@ import { ROUTES } from "@/constants/routes";
 export default function Home() {
   return (
     <div className="space-y-6">
-      <section className="text-center py-2">
+      <section className="py-2 text-center">
         <h1 className="text-4xl font-bold mb-4 text-[var(--gold)]">
           리그 오브 레전드 정보 앱
         </h1>
@@ -13,7 +13,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="grid md:grid-cols-3 gap-6 text-center ">
+      <section className="grid gap-6 text-center md:grid-cols-3 ">
         <HomeCard
           href={ROUTES.CHAMPIONS}
           title="챔피언 정보 보기"

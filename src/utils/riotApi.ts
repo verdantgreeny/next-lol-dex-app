@@ -8,14 +8,13 @@ import { fetchChampionList } from "./serverApi";
  */
 export const getChampionRotation = async (): Promise<Champion[]> => {
   try {
-    // console.time("병렬 처리");
     // 병렬로 로테이션 정보와 전체 챔피언 목록을 가져오기
     const [rotationRes, champions] = await Promise.all([
       fetch("/api/rotation"),
       fetchChampionList(),
     ]);
     const freeChampionIds = await rotationRes.json();
-    // console.timeEnd("병렬 처리");
+
     // console.log("로테이션 데이타:", freeChampionIds);
 
     // 무료 챔피언 ID 목록을 기반으로 챔피언 상세 정보를 매핑

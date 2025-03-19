@@ -11,22 +11,19 @@ export const metadata: Metadata = {
 };
 
 const ChampionDetail = async ({ params }: { params: { id: string } }) => {
-  //   console.log(params.id);
   const champion = await fetchChampionDetail(params.id);
   // console.log(champion);
 
   return (
-    <div className="max-w-5xl mx-auto p-4 space-y-8">
-      <ChampionInfo
-        champion={champion}
-      />
+    <div className="max-w-5xl p-4 mx-auto space-y-8">
+      <ChampionInfo champion={champion} />
 
       <section className="space-y-6">
         <h3 className="text-3xl font-bold text-[var(--gold)]">스킬 정보</h3>
 
         <PassiveSkill passive={champion.passive} />
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid gap-4 md:grid-cols-2">
           {champion.spells.map((spell) => (
             <Spell key={spell.id} spell={spell} />
           ))}

@@ -10,8 +10,8 @@ const ChampionInfo = ({
   champion: Pick<ChampionDetail, "name" | "title" | "image" | "tags" | "lore">;
 }) => {
   return (
-    <section className="flex flex-col md:flex-row gap-8 items-start">
-      <div className="flex relative w-64 h-64">
+    <section className="flex flex-col items-start gap-8 md:flex-row">
+      <div className="relative flex w-64 h-64">
         <Image
           src={`${IMAGE_BASE_URL}/champion/${champion.image.full}`}
           alt={champion.name}
@@ -21,7 +21,7 @@ const ChampionInfo = ({
         />
       </div>
 
-      <div className="space-y-4 flex-1">
+      <div className="flex-1 space-y-4">
         <h1 className="text-4xl font-bold text-[var(--gold)]">
           {champion.name}
         </h1>

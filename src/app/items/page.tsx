@@ -6,10 +6,11 @@ import Loading from "../loading";
 
 const ItemsList = async () => {
   const items = await fetchItemList();
-  // console.log("아이템", items);
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold mb-6 text-[var(--gold)]">아이템 목록</h1>
+      <h1 className="text-3xl font-bold mb-6 text-[var(--gold)]">
+        아이템 목록
+      </h1>
 
       <Suspense fallback={<Loading />}>
         <CommonGrid>

@@ -6,7 +6,7 @@ import React from "react";
 const Spell = ({
   spell,
 }: {
-  spell: Omit<ChampionDetail["spells"][number], "id">; //  spells는 배열 타입이기 때문에, 배열의 각 요소인 스킬에 접근하려면 [number]가 있어야해 함
+  spell: Omit<ChampionDetail["spells"][number], "id">; //  spells는 배열 타입이기 때문에, 배열의 각 요소인 스킬에 접근하려면 [number]가 있어야함
 }) => {
   return (
     <div className="bg-[var(--magic-engineering-black)] p-4 rounded-xl">

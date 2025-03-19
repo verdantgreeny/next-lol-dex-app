@@ -25,9 +25,6 @@ const ItemCard = ({ item }: { item: Item }) => {
         <p className="text-sm text-center text-[var(--gray-1)] w-full">
           {item.gold.total} G
         </p>
-        {/* <p className="text-sm text-justify text-fuchsia-800 w-full overflow-hidden text-ellipsis whitespace-normal">
-          {item.plaintext}
-        </p> */}
       </article>
     </Link>
   );

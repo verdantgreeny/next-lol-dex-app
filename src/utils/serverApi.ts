@@ -7,7 +7,7 @@ import { CACHE_TIME } from "@/constants/riotConstants";
 /**
  * 아이템 목록을 가져오는 비동기 함수
  * @returns {Promise<Item[]>} 아이템 목록을 담은 배열을 반환
- * @throws {Error} 
+ * @throws {Error}
  */
 export const fetchItemList = async (): Promise<Item[]> => {
   try {
@@ -19,7 +19,7 @@ export const fetchItemList = async (): Promise<Item[]> => {
     if (!res.ok) throw new Error(ERRORS.FETCH_FAIL);
 
     const data = await res.json();
-    // console.log(data);
+
     return Object.values(data.data);
   } catch (error) {
     console.error(error);
@@ -27,11 +27,10 @@ export const fetchItemList = async (): Promise<Item[]> => {
   }
 };
 
-
 /**
  * 챔피언 목록을 가져오는 비동기 함수
  * @returns {Promise<Champion[]>} 챔피언 목록을 담은 배열을 반환
- * @throws {Error} 
+ * @throws {Error}
  */
 export const fetchChampionList = async (): Promise<Champion[]> => {
   try {
@@ -42,7 +41,7 @@ export const fetchChampionList = async (): Promise<Champion[]> => {
     if (!res.ok) throw new Error(ERRORS.FETCH_FAIL);
 
     const data = await res.json();
-    //   console.log(data);
+
     return Object.values(data.data);
   } catch (error) {
     console.error(error);
@@ -54,7 +53,7 @@ export const fetchChampionList = async (): Promise<Champion[]> => {
  * 챔피언의 상세 정보를 가져오는 비동기 함수
  * @param {string} id - 챔피언의 ID
  * @returns {Promise<ChampionDetail>} 챔피언의 상세 정보를 반환
- * @throws {Error} 
+ * @throws {Error}
  */
 export const fetchChampionDetail = async (
   id: string
@@ -68,7 +67,7 @@ export const fetchChampionDetail = async (
     if (!res.ok) throw new Error(ERRORS.FETCH_FAIL);
 
     const data = await res.json();
-    //   console.log(data.data);
+
     const champion = data.data[id];
     return champion;
   } catch (error) {
