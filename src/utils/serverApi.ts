@@ -4,6 +4,11 @@ import { Item } from "@/types/Items";
 import { ERRORS } from "@/constants/massages";
 import { CACHE_TIME } from "@/constants/riotConstants";
 
+/**
+ * 아이템 목록을 가져오는 비동기 함수
+ * @returns {Promise<Item[]>} 아이템 목록을 담은 배열을 반환
+ * @throws {Error} 
+ */
 export const fetchItemList = async (): Promise<Item[]> => {
   try {
     // console.log("빌드 시 데이터 가져오기...");
@@ -22,6 +27,12 @@ export const fetchItemList = async (): Promise<Item[]> => {
   }
 };
 
+
+/**
+ * 챔피언 목록을 가져오는 비동기 함수
+ * @returns {Promise<Champion[]>} 챔피언 목록을 담은 배열을 반환
+ * @throws {Error} 
+ */
 export const fetchChampionList = async (): Promise<Champion[]> => {
   try {
     const res = await fetch(`${API_BASE_URL}/champion.json`, {
@@ -39,6 +50,12 @@ export const fetchChampionList = async (): Promise<Champion[]> => {
   }
 };
 
+/**
+ * 챔피언의 상세 정보를 가져오는 비동기 함수
+ * @param {string} id - 챔피언의 ID
+ * @returns {Promise<ChampionDetail>} 챔피언의 상세 정보를 반환
+ * @throws {Error} 
+ */
 export const fetchChampionDetail = async (
   id: string
 ): Promise<ChampionDetail> => {
